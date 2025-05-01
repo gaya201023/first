@@ -1,0 +1,1009 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elegance - Premium Jewelry & Sarees</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    <script>
+tailwind.config={
+theme:{
+extend:{
+colors:{
+primary:'#9f7a49',
+secondary:'#4a5568'
+},
+borderRadius:{
+'none':'0px',
+'sm':'4px',
+DEFAULT:'8px',
+'md':'12px',
+'lg':'16px',
+'xl':'20px',
+'2xl':'24px',
+'3xl':'32px',
+'full':'9999px',
+'button':'8px'
+},
+fontFamily: {
+'playfair': ['"Playfair Display"', 'serif'],
+'poppins': ['Poppins', 'sans-serif'],
+}
+}
+}
+}
+    </script>
+    <style>
+        :where([class^="ri-"])::before {
+            content: "\f3c2";
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .hero-section {
+            background-image: url('https://readdy.ai/api/search-image?query=elegant%20luxury%20jewelry%20and%20sarees%20display%20with%20soft%20golden%20lighting%2C%20premium%20boutique%20atmosphere%20with%20silk%20fabrics%20and%20gold%20jewelry%20displayed%20on%20marble%20counters%2C%20professional%20product%20photography%20with%20soft%20shadows%20and%20highlights%2C%20minimalist%20luxury%20retail%20environment&width=1920&height=800&seq=1&orientation=landscape');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .category-card:hover .category-overlay {
+            opacity: 1;
+        }
+
+        .product-card:hover .quick-actions {
+            opacity: 1;
+        }
+
+        .custom-checkbox {
+            position: relative;
+            padding-left: 28px;
+            cursor: pointer;
+            user-select: none;
+        }
+
+            .custom-checkbox input {
+                position: absolute;
+                opacity: 0;
+                cursor: pointer;
+                height: 0;
+                width: 0;
+            }
+
+        .checkmark {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 18px;
+            width: 18px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        .custom-checkbox:hover input ~ .checkmark {
+            border-color: #ccc;
+        }
+
+        .custom-checkbox input:checked ~ .checkmark {
+            background-color: #9f7a49;
+            border-color: #9f7a49;
+        }
+
+        .checkmark:after {
+            content: "";
+            position: absolute;
+            display: none;
+        }
+
+        .custom-checkbox input:checked ~ .checkmark:after {
+            display: block;
+        }
+
+        .custom-checkbox .checkmark:after {
+            left: 6px;
+            top: 2px;
+            width: 5px;
+            height: 10px;
+            border: solid white;
+            border-width: 0 2px 2px 0;
+            transform: rotate(45deg);
+        }
+
+        .custom-range {
+            -webkit-appearance: none;
+            width: 100%;
+            height: 4px;
+            background: #e5e7eb;
+            border-radius: 5px;
+            outline: none;
+        }
+
+            .custom-range::-webkit-slider-thumb {
+                -webkit-appearance: none;
+                appearance: none;
+                width: 18px;
+                height: 18px;
+                background: #9f7a49;
+                border-radius: 50%;
+                cursor: pointer;
+            }
+
+            .custom-range::-moz-range-thumb {
+                width: 18px;
+                height: 18px;
+                background: #9f7a49;
+                border-radius: 50%;
+                cursor: pointer;
+                border: none;
+            }
+
+        .custom-switch {
+            position: relative;
+            display: inline-block;
+            width: 44px;
+            height: 24px;
+        }
+
+            .custom-switch input {
+                opacity: 0;
+                width: 0;
+                height: 0;
+            }
+
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #e5e7eb;
+            transition: .4s;
+            border-radius: 24px;
+        }
+
+            .slider:before {
+                position: absolute;
+                content: "";
+                height: 18px;
+                width: 18px;
+                left: 3px;
+                bottom: 3px;
+                background-color: white;
+                transition: .4s;
+                border-radius: 50%;
+            }
+
+        input:checked + .slider {
+            background-color: #9f7a49;
+        }
+
+            input:checked + .slider:before {
+                transform: translateX(20px);
+            }
+
+        .search-input:focus {
+            outline: none;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: white;
+            min-width: 200px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+            z-index: 50;
+            border-radius: 8px;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+    </style>
+</head>
+<body class="bg-white">
+    <!-- Header -->
+    <header class="border-b border-gray-100 sticky top-0 bg-white z-50">
+        <div class="container mx-auto px-4 py-3">
+            <div class="flex items-center justify-between">
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <a href="#"><img src="https://static.readdy.ai/image/d459f1ebf4a98e10b039e2d270362a4b/39f4d259df6aa69fd68b19a1034f0a37.jpeg" alt="Woolly Wonders Logo" class="h-12"></a>
+                </div>
+                <!-- Search Bar -->
+                <div class="relative w-2/5">
+                    <div class="flex items-center border border-gray-200 rounded-full overflow-hidden px-4 py-2">
+                        <div class="dropdown mr-2">
+                            <button class="text-gray-500 text-sm flex items-center whitespace-nowrap !rounded-button">
+                                All Categories
+                                <div class="w-4 h-4 flex items-center justify-center ml-1">
+                                    <i class="ri-arrow-down-s-line"></i>
+                                </div>
+                            </button>
+                            <div class="dropdown-content mt-2">
+                                <div class="py-2 px-4 hover:bg-gray-50 text-sm">Jewelry</div>
+                                <div class="py-2 px-4 hover:bg-gray-50 text-sm">Sarees</div>
+                                <div class="py-2 px-4 hover:bg-gray-50 text-sm">New Arrivals</div>
+                                <div class="py-2 px-4 hover:bg-gray-50 text-sm">Offers</div>
+                            </div>
+                        </div>
+                        <div class="w-px h-5 bg-gray-200 mr-3"></div>
+                        <input type="text" class="search-input flex-1 border-none text-sm" placeholder="Search for jewelry, sarees...">
+                        <div class="w-8 h-8 flex items-center justify-center text-gray-500">
+                            <i class="ri-search-line"></i>
+                        </div>
+                    </div>
+                </div>
+                <!-- Right Icons -->
+                <div class="flex items-center space-x-5">
+                    <div class="relative w-8 h-8 flex items-center justify-center text-gray-700 cursor-pointer">
+                        <i class="ri-heart-line ri-xl"></i>
+                        <span class="absolute -top-1 -right-1 bg-primary text-white text-xs w-4 h-4 flex items-center justify-center rounded-full">3</span>
+                    </div>
+                    <div class="relative w-8 h-8 flex items-center justify-center text-gray-700 cursor-pointer">
+                        <i class="ri-shopping-bag-line ri-xl"></i>
+                        <span class="absolute -top-1 -right-1 bg-primary text-white text-xs w-4 h-4 flex items-center justify-center rounded-full">2</span>
+                    </div>
+                    <div class="w-8 h-8 flex items-center justify-center text-gray-700 cursor-pointer">
+                        <i class="ri-user-line ri-xl"></i>
+                    </div>
+                </div>
+            </div>
+            <!-- Navigation Menu -->
+            <nav class="flex items-center justify-center py-3 space-x-8">
+                <div class="dropdown">
+                    <a href="#" class="text-gray-800 font-medium hover:text-primary transition-colors flex items-center">
+                        Jewelry
+                        <div class="w-4 h-4 flex items-center justify-center ml-1">
+                            <i class="ri-arrow-down-s-line"></i>
+                        </div>
+                    </a>
+                    <div class="dropdown-content mt-2">
+                        <div class="py-2 px-4 hover:bg-gray-50">Traditional</div>
+                        <div class="py-2 px-4 hover:bg-gray-50">Modern</div>
+                        <div class="py-2 px-4 hover:bg-gray-50">Bridal</div>
+                        <div class="py-2 px-4 hover:bg-gray-50">Collections</div>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <a href="#" class="text-gray-800 font-medium hover:text-primary transition-colors flex items-center">
+                        Sarees
+                        <div class="w-4 h-4 flex items-center justify-center ml-1">
+                            <i class="ri-arrow-down-s-line"></i>
+                        </div>
+                    </a>
+                    <div class="dropdown-content mt-2">
+                        <div class="py-2 px-4 hover:bg-gray-50">Silk</div>
+                        <div class="py-2 px-4 hover:bg-gray-50">Designer</div>
+                        <div class="py-2 px-4 hover:bg-gray-50">Wedding</div>
+                        <div class="py-2 px-4 hover:bg-gray-50">Casual</div>
+                    </div>
+                </div>
+                <a href="#" class="text-gray-800 font-medium hover:text-primary transition-colors">New Arrivals</a>
+                <a href="#" class="text-gray-800 font-medium hover:text-primary transition-colors">Offers</a>
+                <a href="#" class="text-gray-800 font-medium hover:text-primary transition-colors">Collections</a>
+                <a href="#" class="text-gray-800 font-medium hover:text-primary transition-colors">Bridal</a>
+            </nav>
+        </div>
+    </header>
+    <!-- Hero Banner -->
+    <section class="hero-section relative">
+        <div class="absolute inset-0 bg-black bg-opacity-30"></div>
+        <div class="container mx-auto px-4 py-32 relative z-10">
+            <div class="max-w-xl">
+                <h1 class="text-5xl font-playfair font-bold text-white mb-6 leading-tight">Timeless Elegance, Crafted with Passion</h1>
+                <p class="text-white text-lg mb-8">Discover our exquisite collection of handcrafted jewelry and premium sarees, designed to celebrate your unique style and heritage.</p>
+                <div class="flex space-x-4">
+                    <a href="#" class="bg-primary text-white px-8 py-3 font-medium !rounded-button hover:bg-opacity-90 transition-colors whitespace-nowrap">Shop Jewelry</a>
+                    <a href="#" class="bg-white text-primary px-8 py-3 font-medium !rounded-button hover:bg-gray-50 transition-colors whitespace-nowrap">Explore Sarees</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Category Navigation -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-playfair font-bold text-center mb-4">Shop by Category</h2>
+            <p class="text-gray-600 text-center mb-12 max-w-2xl mx-auto">Explore our carefully curated collections of exquisite jewelry and sarees, designed to complement every occasion and style preference.</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+                <!-- Jewelry Category -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-sm">
+                    <h3 class="text-2xl font-playfair font-semibold p-6 border-b">Jewelry</h3>
+                    <div class="grid grid-cols-2 gap-4 p-6">
+                        <div class="category-card relative rounded overflow-hidden cursor-pointer">
+                            <img src="https://readdy.ai/api/search-image?query=traditional%20Indian%20gold%20jewelry%20with%20intricate%20designs%20and%20gemstones%20on%20a%20white%20marble%20background%2C%20professional%20product%20photography%20with%20soft%20lighting%2C%20luxury%20jewelry%20display%2C%20high-end%20retail%20photography&width=400&height=300&seq=2&orientation=landscape" alt="Traditional Jewelry" class="w-full h-48 object-cover object-top">
+                            <div class="category-overlay absolute inset-0 bg-black bg-opacity-40 opacity-0 transition-opacity flex items-center justify-center">
+                                <div class="text-center">
+                                    <h4 class="text-white font-medium mb-2">Traditional</h4>
+                                    <a href="#" class="inline-block bg-white text-primary px-4 py-2 text-sm !rounded-button whitespace-nowrap">Shop Now</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="category-card relative rounded overflow-hidden cursor-pointer">
+                            <img src="https://readdy.ai/api/search-image?query=modern%20minimalist%20jewelry%20with%20clean%20lines%20and%20geometric%20shapes%20on%20a%20white%20marble%20background%2C%20professional%20product%20photography%20with%20soft%20lighting%2C%20contemporary%20jewelry%20design%2C%20high-end%20retail%20photography&width=400&height=300&seq=3&orientation=landscape" alt="Modern Jewelry" class="w-full h-48 object-cover object-top">
+                            <div class="category-overlay absolute inset-0 bg-black bg-opacity-40 opacity-0 transition-opacity flex items-center justify-center">
+                                <div class="text-center">
+                                    <h4 class="text-white font-medium mb-2">Modern</h4>
+                                    <a href="#" class="inline-block bg-white text-primary px-4 py-2 text-sm !rounded-button whitespace-nowrap">Shop Now</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="category-card relative rounded overflow-hidden cursor-pointer">
+                            <img src="https://readdy.ai/api/search-image?query=luxurious%20bridal%20jewelry%20set%20with%20necklace%2C%20earrings%20and%20tikka%20on%20a%20white%20marble%20background%2C%20professional%20product%20photography%20with%20soft%20lighting%2C%20wedding%20jewelry%20collection%2C%20high-end%20retail%20photography&width=400&height=300&seq=4&orientation=landscape" alt="Bridal Jewelry" class="w-full h-48 object-cover object-top">
+                            <div class="category-overlay absolute inset-0 bg-black bg-opacity-40 opacity-0 transition-opacity flex items-center justify-center">
+                                <div class="text-center">
+                                    <h4 class="text-white font-medium mb-2">Bridal</h4>
+                                    <a href="#" class="inline-block bg-white text-primary px-4 py-2 text-sm !rounded-button whitespace-nowrap">Shop Now</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="category-card relative rounded overflow-hidden cursor-pointer">
+                            <img src="https://readdy.ai/api/search-image?query=curated%20collection%20of%20premium%20jewelry%20pieces%20including%20necklaces%2C%20rings%20and%20bracelets%20on%20a%20white%20marble%20background%2C%20professional%20product%20photography%20with%20soft%20lighting%2C%20luxury%20jewelry%20collection%2C%20high-end%20retail%20photography&width=400&height=300&seq=5&orientation=landscape" alt="Collections" class="w-full h-48 object-cover object-top">
+                            <div class="category-overlay absolute inset-0 bg-black bg-opacity-40 opacity-0 transition-opacity flex items-center justify-center">
+                                <div class="text-center">
+                                    <h4 class="text-white font-medium mb-2">Collections</h4>
+                                    <a href="#" class="inline-block bg-white text-primary px-4 py-2 text-sm !rounded-button whitespace-nowrap">Shop Now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Sarees Category -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-sm">
+                    <h3 class="text-2xl font-playfair font-semibold p-6 border-b">Sarees</h3>
+                    <div class="grid grid-cols-2 gap-4 p-6">
+                        <div class="category-card relative rounded overflow-hidden cursor-pointer">
+                            <img src="https://readdy.ai/api/search-image?query=luxurious%20silk%20saree%20with%20rich%20gold%20border%20and%20intricate%20patterns%20on%20a%20white%20marble%20background%2C%20professional%20product%20photography%20with%20soft%20lighting%2C%20traditional%20Indian%20silk%20saree%2C%20high-end%20retail%20photography&width=400&height=300&seq=6&orientation=landscape" alt="Silk Sarees" class="w-full h-48 object-cover object-top">
+                            <div class="category-overlay absolute inset-0 bg-black bg-opacity-40 opacity-0 transition-opacity flex items-center justify-center">
+                                <div class="text-center">
+                                    <h4 class="text-white font-medium mb-2">Silk</h4>
+                                    <a href="#" class="inline-block bg-white text-primary px-4 py-2 text-sm !rounded-button whitespace-nowrap">Shop Now</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="category-card relative rounded overflow-hidden cursor-pointer">
+                            <img src="https://readdy.ai/api/search-image?query=designer%20saree%20with%20contemporary%20patterns%20and%20embellishments%20on%20a%20white%20marble%20background%2C%20professional%20product%20photography%20with%20soft%20lighting%2C%20modern%20designer%20saree%2C%20high-end%20retail%20photography&width=400&height=300&seq=7&orientation=landscape" alt="Designer Sarees" class="w-full h-48 object-cover object-top">
+                            <div class="category-overlay absolute inset-0 bg-black bg-opacity-40 opacity-0 transition-opacity flex items-center justify-center">
+                                <div class="text-center">
+                                    <h4 class="text-white font-medium mb-2">Designer</h4>
+                                    <a href="#" class="inline-block bg-white text-primary px-4 py-2 text-sm !rounded-button whitespace-nowrap">Shop Now</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="category-card relative rounded overflow-hidden cursor-pointer">
+                            <img src="https://readdy.ai/api/search-image?query=elaborate%20wedding%20saree%20with%20heavy%20embroidery%20and%20embellishments%20on%20a%20white%20marble%20background%2C%20professional%20product%20photography%20with%20soft%20lighting%2C%20bridal%20saree%20with%20rich%20details%2C%20high-end%20retail%20photography&width=400&height=300&seq=8&orientation=landscape" alt="Wedding Sarees" class="w-full h-48 object-cover object-top">
+                            <div class="category-overlay absolute inset-0 bg-black bg-opacity-40 opacity-0 transition-opacity flex items-center justify-center">
+                                <div class="text-center">
+                                    <h4 class="text-white font-medium mb-2">Wedding</h4>
+                                    <a href="#" class="inline-block bg-white text-primary px-4 py-2 text-sm !rounded-button whitespace-nowrap">Shop Now</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="category-card relative rounded overflow-hidden cursor-pointer">
+                            <img src="https://readdy.ai/api/search-image?query=lightweight%20casual%20saree%20with%20simple%20patterns%20and%20comfortable%20fabric%20on%20a%20white%20marble%20background%2C%20professional%20product%20photography%20with%20soft%20lighting%2C%20everyday%20wear%20saree%2C%20high-end%20retail%20photography&width=400&height=300&seq=9&orientation=landscape" alt="Casual Sarees" class="w-full h-48 object-cover object-top">
+                            <div class="category-overlay absolute inset-0 bg-black bg-opacity-40 opacity-0 transition-opacity flex items-center justify-center">
+                                <div class="text-center">
+                                    <h4 class="text-white font-medium mb-2">Casual</h4>
+                                    <a href="#" class="inline-block bg-white text-primary px-4 py-2 text-sm !rounded-button whitespace-nowrap">Shop Now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Featured Products Section -->
+    <section class="py-16">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center mb-12">
+                <div>
+                    <h2 class="text-3xl font-playfair font-bold mb-2">Featured Products</h2>
+                    <p class="text-gray-600">Discover our most popular and trending items</p>
+                </div>
+                <div class="flex space-x-4">
+                    <button class="text-primary border border-primary px-6 py-2 !rounded-button hover:bg-primary hover:text-white transition-colors whitespace-nowrap">View All</button>
+                    <div class="flex space-x-2">
+                        <button class="w-10 h-10 flex items-center justify-center border border-gray-200 !rounded-button hover:border-primary transition-colors">
+                            <i class="ri-arrow-left-s-line"></i>
+                        </button>
+                        <button class="w-10 h-10 flex items-center justify-center border border-gray-200 !rounded-button hover:border-primary transition-colors">
+                            <i class="ri-arrow-right-s-line"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!-- Filter and Products Container -->
+            <div class="flex flex-wrap">
+                <!-- Filter Panel -->
+                <div class="w-1/4 pr-8">
+                    <div class="bg-white rounded-lg p-6 shadow-sm sticky top-24">
+                        <div class="flex justify-between items-center mb-6">
+                            <h3 class="font-semibold text-lg">Filters</h3>
+                            <button class="text-primary text-sm hover:underline whitespace-nowrap">Clear All</button>
+                        </div>
+                        <!-- Price Range -->
+                        <div class="mb-6">
+                            <h4 class="font-medium mb-3">Price Range</h4>
+                            <input type="range" min="0" max="50000" value="25000" class="custom-range mb-2">
+                            <div class="flex justify-between text-sm text-gray-600">
+                                <span>₹0</span>
+                                <span>₹50,000</span>
+                            </div>
+                        </div>
+                        <!-- Style Categories -->
+                        <div class="mb-6">
+                            <h4 class="font-medium mb-3">Style</h4>
+                            <div class="space-y-2">
+                                <label class="custom-checkbox flex items-center text-sm text-gray-700">
+                                    Traditional
+                                    <input type="checkbox" checked>
+                                    <span class="checkmark"></span>
+                                </label>
+                                <label class="custom-checkbox flex items-center text-sm text-gray-700">
+                                    Modern
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+                                <label class="custom-checkbox flex items-center text-sm text-gray-700">
+                                    Contemporary
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+                                <label class="custom-checkbox flex items-center text-sm text-gray-700">
+                                    Fusion
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </div>
+                        </div>
+                        <!-- Occasion Filters -->
+                        <div class="mb-6">
+                            <h4 class="font-medium mb-3">Occasion</h4>
+                            <div class="space-y-2">
+                                <label class="custom-checkbox flex items-center text-sm text-gray-700">
+                                    Wedding
+                                    <input type="checkbox" checked>
+                                    <span class="checkmark"></span>
+                                </label>
+                                <label class="custom-checkbox flex items-center text-sm text-gray-700">
+                                    Festival
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+                                <label class="custom-checkbox flex items-center text-sm text-gray-700">
+                                    Casual
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+                                <label class="custom-checkbox flex items-center text-sm text-gray-700">
+                                    Party
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </div>
+                        </div>
+                        <!-- Material Filters -->
+                        <div class="mb-6">
+                            <h4 class="font-medium mb-3">Material</h4>
+                            <div class="space-y-2">
+                                <label class="custom-checkbox flex items-center text-sm text-gray-700">
+                                    Gold
+                                    <input type="checkbox" checked>
+                                    <span class="checkmark"></span>
+                                </label>
+                                <label class="custom-checkbox flex items-center text-sm text-gray-700">
+                                    Silver
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+                                <label class="custom-checkbox flex items-center text-sm text-gray-700">
+                                    Diamond
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+                                <label class="custom-checkbox flex items-center text-sm text-gray-700">
+                                    Silk
+                                    <input type="checkbox" checked>
+                                    <span class="checkmark"></span>
+                                </label>
+                                <label class="custom-checkbox flex items-center text-sm text-gray-700">
+                                    Cotton
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </div>
+                        </div>
+                        <!-- Color Selection -->
+                        <div>
+                            <h4 class="font-medium mb-3">Color</h4>
+                            <div class="flex flex-wrap gap-2">
+                                <div class="w-6 h-6 bg-yellow-600 rounded-full cursor-pointer border-2 border-primary"></div>
+                                <div class="w-6 h-6 bg-red-600 rounded-full cursor-pointer"></div>
+                                <div class="w-6 h-6 bg-green-600 rounded-full cursor-pointer"></div>
+                                <div class="w-6 h-6 bg-blue-600 rounded-full cursor-pointer"></div>
+                                <div class="w-6 h-6 bg-purple-600 rounded-full cursor-pointer"></div>
+                                <div class="w-6 h-6 bg-pink-600 rounded-full cursor-pointer"></div>
+                                <div class="w-6 h-6 bg-gray-800 rounded-full cursor-pointer"></div>
+                                <div class="w-6 h-6 bg-white rounded-full cursor-pointer border border-gray-300"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Products Grid -->
+                <div class="w-3/4">
+                    <!-- Sorting and Count -->
+                    <div class="flex justify-between items-center mb-6 bg-white p-4 rounded-lg shadow-sm">
+                        <div class="text-sm text-gray-600">Showing <span class="font-medium">24</span> of <span class="font-medium">156</span> products</div>
+                        <div class="flex items-center">
+                            <span class="text-sm text-gray-600 mr-2">Sort by:</span>
+                            <div class="relative">
+                                <select class="appearance-none bg-white border border-gray-200 rounded px-4 py-2 pr-8 text-sm focus:outline-none focus:border-primary">
+                                    <option>Popularity</option>
+                                    <option>Price: Low to High</option>
+                                    <option>Price: High to Low</option>
+                                    <option>New Arrivals</option>
+                                    <option>Best Sellers</option>
+                                </select>
+                                <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+                                    <i class="ri-arrow-down-s-line"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Products Grid -->
+                    <div class="grid grid-cols-3 gap-6">
+                        <!-- Product 1 -->
+                        <div class="product-card bg-white rounded-lg overflow-hidden shadow-sm">
+                            <div class="relative">
+                                <img src="https://readdy.ai/api/search-image?query=elegant%20gold%20necklace%20with%20intricate%20design%20and%20ruby%20gemstones%20on%20a%20white%20marble%20background%2C%20professional%20product%20photography%20with%20soft%20lighting%2C%20luxury%20jewelry%20display%2C%20high-end%20retail%20photography&width=400&height=400&seq=10&orientation=squarish" alt="Gold Ruby Necklace" class="w-full h-64 object-cover object-top">
+                                <div class="absolute top-3 left-3">
+                                    <span class="bg-primary text-white text-xs px-2 py-1 rounded">New</span>
+                                </div>
+                                <div class="quick-actions absolute top-3 right-3 opacity-0 transition-opacity">
+                                    <div class="w-8 h-8 bg-white rounded-full flex items-center justify-center mb-2 shadow-sm cursor-pointer hover:bg-gray-100">
+                                        <i class="ri-heart-line text-gray-700"></i>
+                                    </div>
+                                    <div class="w-8 h-8 bg-white rounded-full flex items-center justify-center shadow-sm cursor-pointer hover:bg-gray-100">
+                                        <i class="ri-eye-line text-gray-700"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="p-4">
+                                <div class="text-sm text-gray-500 mb-1">Traditional</div>
+                                <h3 class="font-medium mb-1">Maharani Ruby Gold Necklace</h3>
+                                <div class="flex items-center mb-2">
+                                    <div class="flex text-primary text-sm">
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-half-fill"></i>
+                                    </div>
+                                    <span class="text-xs text-gray-500 ml-1">(42)</span>
+                                </div>
+                                <div class="flex justify-between items-center">
+                                    <div>
+                                        <span class="text-primary font-semibold">₹28,999</span>
+                                        <span class="text-gray-400 text-sm line-through ml-2">₹32,999</span>
+                                    </div>
+                                    <button class="w-8 h-8 bg-primary text-white rounded-full flex items-center justify-center hover:bg-opacity-90 transition-colors !rounded-button">
+                                        <i class="ri-shopping-bag-line"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Product 2 -->
+                        <div class="product-card bg-white rounded-lg overflow-hidden shadow-sm">
+                            <div class="relative">
+                                <img src="https://readdy.ai/api/search-image?query=elegant%20silk%20saree%20in%20deep%20red%20with%20gold%20border%20and%20intricate%20patterns%20on%20a%20white%20marble%20background%2C%20professional%20product%20photography%20with%20soft%20lighting%2C%20luxury%20saree%20display%2C%20high-end%20retail%20photography&width=400&height=400&seq=11&orientation=squarish" alt="Silk Saree" class="w-full h-64 object-cover object-top">
+                                <div class="absolute top-3 left-3">
+                                    <span class="bg-yellow-500 text-white text-xs px-2 py-1 rounded">Best Seller</span>
+                                </div>
+                                <div class="quick-actions absolute top-3 right-3 opacity-0 transition-opacity">
+                                    <div class="w-8 h-8 bg-white rounded-full flex items-center justify-center mb-2 shadow-sm cursor-pointer hover:bg-gray-100">
+                                        <i class="ri-heart-line text-gray-700"></i>
+                                    </div>
+                                    <div class="w-8 h-8 bg-white rounded-full flex items-center justify-center shadow-sm cursor-pointer hover:bg-gray-100">
+                                        <i class="ri-eye-line text-gray-700"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="p-4">
+                                <div class="text-sm text-gray-500 mb-1">Silk</div>
+                                <h3 class="font-medium mb-1">Royal Kanchipuram Silk Saree</h3>
+                                <div class="flex items-center mb-2">
+                                    <div class="flex text-primary text-sm">
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-fill"></i>
+                                    </div>
+                                    <span class="text-xs text-gray-500 ml-1">(78)</span>
+                                </div>
+                                <div class="flex justify-between items-center">
+                                    <div>
+                                        <span class="text-primary font-semibold">₹18,499</span>
+                                        <span class="text-gray-400 text-sm line-through ml-2">₹22,999</span>
+                                    </div>
+                                    <button class="w-8 h-8 bg-primary text-white rounded-full flex items-center justify-center hover:bg-opacity-90 transition-colors !rounded-button">
+                                        <i class="ri-shopping-bag-line"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Product 3 -->
+                        <div class="product-card bg-white rounded-lg overflow-hidden shadow-sm">
+                            <div class="relative">
+                                <img src="https://readdy.ai/api/search-image?query=elegant%20diamond%20earrings%20with%20intricate%20design%20on%20a%20white%20marble%20background%2C%20professional%20product%20photography%20with%20soft%20lighting%2C%20luxury%20jewelry%20display%2C%20high-end%20retail%20photography&width=400&height=400&seq=12&orientation=squarish" alt="Diamond Earrings" class="w-full h-64 object-cover object-top">
+                                <div class="quick-actions absolute top-3 right-3 opacity-0 transition-opacity">
+                                    <div class="w-8 h-8 bg-white rounded-full flex items-center justify-center mb-2 shadow-sm cursor-pointer hover:bg-gray-100">
+                                        <i class="ri-heart-line text-gray-700"></i>
+                                    </div>
+                                    <div class="w-8 h-8 bg-white rounded-full flex items-center justify-center shadow-sm cursor-pointer hover:bg-gray-100">
+                                        <i class="ri-eye-line text-gray-700"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="p-4">
+                                <div class="text-sm text-gray-500 mb-1">Modern</div>
+                                <h3 class="font-medium mb-1">Celestial Diamond Earrings</h3>
+                                <div class="flex items-center mb-2">
+                                    <div class="flex text-primary text-sm">
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-line"></i>
+                                    </div>
+                                    <span class="text-xs text-gray-500 ml-1">(36)</span>
+                                </div>
+                                <div class="flex justify-between items-center">
+                                    <div>
+                                        <span class="text-primary font-semibold">₹42,999</span>
+                                    </div>
+                                    <button class="w-8 h-8 bg-primary text-white rounded-full flex items-center justify-center hover:bg-opacity-90 transition-colors !rounded-button">
+                                        <i class="ri-shopping-bag-line"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Product 4 -->
+                        <div class="product-card bg-white rounded-lg overflow-hidden shadow-sm">
+                            <div class="relative">
+                                <img src="https://readdy.ai/api/search-image?query=elegant%20designer%20saree%20in%20pastel%20blue%20with%20contemporary%20patterns%20on%20a%20white%20marble%20background%2C%20professional%20product%20photography%20with%20soft%20lighting%2C%20luxury%20saree%20display%2C%20high-end%20retail%20photography&width=400&height=400&seq=13&orientation=squarish" alt="Designer Saree" class="w-full h-64 object-cover object-top">
+                                <div class="absolute top-3 left-3">
+                                    <span class="bg-red-500 text-white text-xs px-2 py-1 rounded">20% Off</span>
+                                </div>
+                                <div class="quick-actions absolute top-3 right-3 opacity-0 transition-opacity">
+                                    <div class="w-8 h-8 bg-white rounded-full flex items-center justify-center mb-2 shadow-sm cursor-pointer hover:bg-gray-100">
+                                        <i class="ri-heart-line text-gray-700"></i>
+                                    </div>
+                                    <div class="w-8 h-8 bg-white rounded-full flex items-center justify-center shadow-sm cursor-pointer hover:bg-gray-100">
+                                        <i class="ri-eye-line text-gray-700"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="p-4">
+                                <div class="text-sm text-gray-500 mb-1">Designer</div>
+                                <h3 class="font-medium mb-1">Contemporary Pastel Saree</h3>
+                                <div class="flex items-center mb-2">
+                                    <div class="flex text-primary text-sm">
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-half-fill"></i>
+                                    </div>
+                                    <span class="text-xs text-gray-500 ml-1">(52)</span>
+                                </div>
+                                <div class="flex justify-between items-center">
+                                    <div>
+                                        <span class="text-primary font-semibold">₹12,799</span>
+                                        <span class="text-gray-400 text-sm line-through ml-2">₹15,999</span>
+                                    </div>
+                                    <button class="w-8 h-8 bg-primary text-white rounded-full flex items-center justify-center hover:bg-opacity-90 transition-colors !rounded-button">
+                                        <i class="ri-shopping-bag-line"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Product 5 -->
+                        <div class="product-card bg-white rounded-lg overflow-hidden shadow-sm">
+                            <div class="relative">
+                                <img src="https://readdy.ai/api/search-image?query=elegant%20gold%20bangles%20set%20with%20intricate%20design%20on%20a%20white%20marble%20background%2C%20professional%20product%20photography%20with%20soft%20lighting%2C%20luxury%20jewelry%20display%2C%20high-end%20retail%20photography&width=400&height=400&seq=14&orientation=squarish" alt="Gold Bangles" class="w-full h-64 object-cover object-top">
+                                <div class="quick-actions absolute top-3 right-3 opacity-0 transition-opacity">
+                                    <div class="w-8 h-8 bg-white rounded-full flex items-center justify-center mb-2 shadow-sm cursor-pointer hover:bg-gray-100">
+                                        <i class="ri-heart-line text-gray-700"></i>
+                                    </div>
+                                    <div class="w-8 h-8 bg-white rounded-full flex items-center justify-center shadow-sm cursor-pointer hover:bg-gray-100">
+                                        <i class="ri-eye-line text-gray-700"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="p-4">
+                                <div class="text-sm text-gray-500 mb-1">Traditional</div>
+                                <h3 class="font-medium mb-1">Antique Gold Bangles Set</h3>
+                                <div class="flex items-center mb-2">
+                                    <div class="flex text-primary text-sm">
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-line"></i>
+                                    </div>
+                                    <span class="text-xs text-gray-500 ml-1">(29)</span>
+                                </div>
+                                <div class="flex justify-between items-center">
+                                    <div>
+                                        <span class="text-primary font-semibold">₹32,499</span>
+                                    </div>
+                                    <button class="w-8 h-8 bg-primary text-white rounded-full flex items-center justify-center hover:bg-opacity-90 transition-colors !rounded-button">
+                                        <i class="ri-shopping-bag-line"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Product 6 -->
+                        <div class="product-card bg-white rounded-lg overflow-hidden shadow-sm">
+                            <div class="relative">
+                                <img src="https://readdy.ai/api/search-image?query=elegant%20wedding%20saree%20in%20deep%20maroon%20with%20heavy%20gold%20embroidery%20on%20a%20white%20marble%20background%2C%20professional%20product%20photography%20with%20soft%20lighting%2C%20luxury%20bridal%20saree%20display%2C%20high-end%20retail%20photography&width=400&height=400&seq=15&orientation=squarish" alt="Wedding Saree" class="w-full h-64 object-cover object-top">
+                                <div class="absolute top-3 left-3">
+                                    <span class="bg-primary text-white text-xs px-2 py-1 rounded">Premium</span>
+                                </div>
+                                <div class="quick-actions absolute top-3 right-3 opacity-0 transition-opacity">
+                                    <div class="w-8 h-8 bg-white rounded-full flex items-center justify-center mb-2 shadow-sm cursor-pointer hover:bg-gray-100">
+                                        <i class="ri-heart-line text-gray-700"></i>
+                                    </div>
+                                    <div class="w-8 h-8 bg-white rounded-full flex items-center justify-center shadow-sm cursor-pointer hover:bg-gray-100">
+                                        <i class="ri-eye-line text-gray-700"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="p-4">
+                                <div class="text-sm text-gray-500 mb-1">Wedding</div>
+                                <h3 class="font-medium mb-1">Royal Bridal Silk Saree</h3>
+                                <div class="flex items-center mb-2">
+                                    <div class="flex text-primary text-sm">
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-fill"></i>
+                                    </div>
+                                    <span class="text-xs text-gray-500 ml-1">(64)</span>
+                                </div>
+                                <div class="flex justify-between items-center">
+                                    <div>
+                                        <span class="text-primary font-semibold">₹45,999</span>
+                                    </div>
+                                    <button class="w-8 h-8 bg-primary text-white rounded-full flex items-center justify-center hover:bg-opacity-90 transition-colors !rounded-button">
+                                        <i class="ri-shopping-bag-line"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Pagination -->
+                    <div class="flex justify-center mt-12">
+                        <div class="flex space-x-2">
+                            <button class="w-10 h-10 flex items-center justify-center border border-gray-200 rounded hover:border-primary transition-colors">
+                                <i class="ri-arrow-left-s-line"></i>
+                            </button>
+                            <button class="w-10 h-10 flex items-center justify-center bg-primary text-white rounded">1</button>
+                            <button class="w-10 h-10 flex items-center justify-center border border-gray-200 rounded hover:border-primary transition-colors">2</button>
+                            <button class="w-10 h-10 flex items-center justify-center border border-gray-200 rounded hover:border-primary transition-colors">3</button>
+                            <button class="w-10 h-10 flex items-center justify-center border border-gray-200 rounded hover:border-primary transition-colors">
+                                <i class="ri-arrow-right-s-line"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Recently Viewed -->
+    <section class="py-12 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-2xl font-playfair font-bold mb-8">Recently Viewed</h2>
+            <div class="grid grid-cols-5 gap-6">
+                <div class="bg-white rounded-lg overflow-hidden shadow-sm">
+                    <img src="https://readdy.ai/api/search-image?query=elegant%20gold%20bracelet%20with%20diamond%20accents%20on%20a%20white%20marble%20background%2C%20professional%20product%20photography%20with%20soft%20lighting%2C%20luxury%20jewelry%20display%2C%20high-end%20retail%20photography&width=300&height=300&seq=16&orientation=squarish" alt="Gold Bracelet" class="w-full h-48 object-cover object-top">
+                    <div class="p-3">
+                        <h3 class="font-medium text-sm mb-1">Diamond Accent Bracelet</h3>
+                        <span class="text-primary font-semibold text-sm">₹24,999</span>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg overflow-hidden shadow-sm">
+                    <img src="https://readdy.ai/api/search-image?query=elegant%20casual%20cotton%20saree%20in%20light%20blue%20with%20simple%20border%20on%20a%20white%20marble%20background%2C%20professional%20product%20photography%20with%20soft%20lighting%2C%20luxury%20saree%20display%2C%20high-end%20retail%20photography&width=300&height=300&seq=17&orientation=squarish" alt="Cotton Saree" class="w-full h-48 object-cover object-top">
+                    <div class="p-3">
+                        <h3 class="font-medium text-sm mb-1">Light Blue Cotton Saree</h3>
+                        <span class="text-primary font-semibold text-sm">₹4,999</span>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg overflow-hidden shadow-sm">
+                    <img src="https://readdy.ai/api/search-image?query=elegant%20gold%20ring%20with%20emerald%20gemstone%20on%20a%20white%20marble%20background%2C%20professional%20product%20photography%20with%20soft%20lighting%2C%20luxury%20jewelry%20display%2C%20high-end%20retail%20photography&width=300&height=300&seq=18&orientation=squarish" alt="Emerald Ring" class="w-full h-48 object-cover object-top">
+                    <div class="p-3">
+                        <h3 class="font-medium text-sm mb-1">Emerald Solitaire Ring</h3>
+                        <span class="text-primary font-semibold text-sm">₹18,499</span>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg overflow-hidden shadow-sm">
+                    <img src="https://readdy.ai/api/search-image?query=elegant%20designer%20saree%20in%20purple%20with%20silver%20embroidery%20on%20a%20white%20marble%20background%2C%20professional%20product%20photography%20with%20soft%20lighting%2C%20luxury%20saree%20display%2C%20high-end%20retail%20photography&width=300&height=300&seq=19&orientation=squarish" alt="Purple Saree" class="w-full h-48 object-cover object-top">
+                    <div class="p-3">
+                        <h3 class="font-medium text-sm mb-1">Purple Designer Saree</h3>
+                        <span class="text-primary font-semibold text-sm">₹14,999</span>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg overflow-hidden shadow-sm">
+                    <img src="https://readdy.ai/api/search-image?query=elegant%20gold%20pendant%20necklace%20with%20pearl%20accent%20on%20a%20white%20marble%20background%2C%20professional%20product%20photography%20with%20soft%20lighting%2C%20luxury%20jewelry%20display%2C%20high-end%20retail%20photography&width=300&height=300&seq=20&orientation=squarish" alt="Pearl Pendant" class="w-full h-48 object-cover object-top">
+                    <div class="p-3">
+                        <h3 class="font-medium text-sm mb-1">Pearl Accent Pendant</h3>
+                        <span class="text-primary font-semibold text-sm">₹12,799</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Newsletter -->
+    <section class="py-16 bg-primary bg-opacity-5">
+        <div class="container mx-auto px-4">
+            <div class="max-w-2xl mx-auto text-center">
+                <h2 class="text-3xl font-playfair font-bold mb-3">Subscribe to Our Newsletter</h2>
+                <p class="text-gray-600 mb-6">Stay updated with our latest collections, exclusive offers, and styling tips.</p>
+                <div class="flex">
+                    <input type="email" placeholder="Your email address" class="flex-1 px-4 py-3 border-none rounded-l focus:outline-none focus:ring-2 focus:ring-primary">
+                    <button class="bg-primary text-white px-6 py-3 font-medium rounded-r hover:bg-opacity-90 transition-colors whitespace-nowrap !rounded-button">Subscribe</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white pt-16 pb-8">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-4 gap-8 mb-12">
+                <div>
+                    <a href="#"><img src="https://static.readdy.ai/image/d459f1ebf4a98e10b039e2d270362a4b/39f4d259df6aa69fd68b19a1034f0a37.jpeg" alt="Woolly Wonders Logo" class="h-12 mb-6"></a>
+                    <p class="text-gray-400 mb-6">Discover the perfect blend of tradition and contemporary style with our exquisite collection of jewelry and sarees.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 rounded-full border border-gray-700 flex items-center justify-center hover:bg-primary hover:border-primary transition-colors">
+                            <i class="ri-facebook-fill"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full border border-gray-700 flex items-center justify-center hover:bg-primary hover:border-primary transition-colors">
+                            <i class="ri-instagram-line"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full border border-gray-700 flex items-center justify-center hover:bg-primary hover:border-primary transition-colors">
+                            <i class="ri-pinterest-line"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full border border-gray-700 flex items-center justify-center hover:bg-primary hover:border-primary transition-colors">
+                            <i class="ri-youtube-line"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="font-semibold text-lg mb-6">Shop</h3>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Jewelry</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Sarees</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">New Arrivals</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Best Sellers</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Special Offers</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Gift Cards</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-semibold text-lg mb-6">Customer Service</h3>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Contact Us</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">FAQs</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Shipping & Returns</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Size Guide</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Track Order</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-semibold text-lg mb-6">Contact Us</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <div class="w-5 h-5 flex items-center justify-center text-primary mt-1 mr-3">
+                                <i class="ri-map-pin-line"></i>
+                            </div>
+                            <span class="text-gray-400">123 Elegance Street, Luxury Avenue, Mumbai, India - 400001</span>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="w-5 h-5 flex items-center justify-center text-primary mt-1 mr-3">
+                                <i class="ri-phone-line"></i>
+                            </div>
+                            <span class="text-gray-400">+91 98765 43210</span>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="w-5 h-5 flex items-center justify-center text-primary mt-1 mr-3">
+                                <i class="ri-mail-line"></i>
+                            </div>
+                            <span class="text-gray-400">support@elegancejewelry.com</span>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="w-5 h-5 flex items-center justify-center text-primary mt-1 mr-3">
+                                <i class="ri-time-line"></i>
+                            </div>
+                            <span class="text-gray-400">Monday - Saturday: 10:00 AM - 8:00 PM</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8">
+                <div class="flex flex-wrap justify-between items-center">
+                    <div class="text-gray-500 text-sm">
+                        &copy; 2025 Elegance Jewelry & Sarees. All rights reserved.
+                    </div>
+                    <div class="flex items-center space-x-4">
+                        <div class="w-8 h-5 flex items-center justify-center">
+                            <i class="ri-visa-fill ri-lg"></i>
+                        </div>
+                        <div class="w-8 h-5 flex items-center justify-center">
+                            <i class="ri-mastercard-fill ri-lg"></i>
+                        </div>
+                        <div class="w-8 h-5 flex items-center justify-center">
+                            <i class="ri-paypal-fill ri-lg"></i>
+                        </div>
+                        <div class="w-8 h-5 flex items-center justify-center">
+                            <i class="ri-amazon-pay-fill ri-lg"></i>
+                        </div>
+                        <div class="w-8 h-5 flex items-center justify-center">
+                            <i class="ri-apple-fill ri-lg"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script>
+document.addEventListener('DOMContentLoaded', function() {
+// Custom range slider value display
+const rangeSlider = document.querySelector('.custom-range');
+if (rangeSlider) {
+rangeSlider.addEventListener('input', function() {
+const value = this.value;
+const min = this.min || 0;
+const max = this.max || 50000;
+const percent = ((value - min) / (max - min)) * 100;
+this.style.background = `linear-gradient(to right, #9f7a49 0%, #9f7a49 ${percent}%, #e5e7eb ${percent}%, #e5e7eb 100%)`;
+});
+// Initialize slider gradient
+const value = rangeSlider.value;
+const min = rangeSlider.min || 0;
+const max = rangeSlider.max || 50000;
+const percent = ((value - min) / (max - min)) * 100;
+rangeSlider.style.background = `linear-gradient(to right, #9f7a49 0%, #9f7a49 ${percent}%, #e5e7eb ${percent}%, #e5e7eb 100%)`;
+}
+});
+document.addEventListener('DOMContentLoaded', function() {
+// Add to wishlist functionality
+const wishlistButtons = document.querySelectorAll('.quick-actions .ri-heart-line');
+wishlistButtons.forEach(button => {
+button.addEventListener('click', function() {
+if (this.classList.contains('ri-heart-line')) {
+this.classList.remove('ri-heart-line');
+this.classList.add('ri-heart-fill');
+this.classList.add('text-primary');
+} else {
+this.classList.remove('ri-heart-fill');
+this.classList.remove('text-primary');
+this.classList.add('ri-heart-line');
+}
+});
+});
+});
+    </script>
+</body>
+</html>
